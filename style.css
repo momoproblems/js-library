@@ -48,3 +48,22 @@ table {
 }
 
 /* reset end */
+
+body > * {
+	border: 1px solid #000;
+}
+
+body > * > * {
+	border: 1px solid #df0c0c;
+}
+
+body > * > * > * {
+	border: 1px solid #0c7ddf;
+}
+
+.navbar {
+	display: inline-flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
