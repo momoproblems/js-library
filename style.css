@@ -78,20 +78,23 @@ body > * > * > * {
 }
 
 .navbar-links {
-	display: flex;
+	display: inline-flex;
 	justify-content: space-between;
 	align-items: center;
 	width: 10rem;
 	margin-right: 1rem;
 }
 
-.navbar-links > * {
-	font-size: 1.5rem;
-}
-
 .navbar-links > a {
 	text-decoration: none;
 	color: white;
 }
+
+.navbar-links > * {
+	font-size: 1.5rem;
+}
+
+
+
 
 /* NAVBAR END */
