@@ -128,3 +128,13 @@ body > * > * > * > * {
 	height: 3px;
 	background-color: rgb(0, 0, 0);
 }
+
+@media (max-width: 500px) {
+	.navbar-toggle {
+		display: flex;
+	}
+
+	.navbar-links {
+		display: none;
+	}
+}
