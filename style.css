@@ -65,24 +65,19 @@ body > * > * > * {
 
 .navbar {
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 	background-color: rgb(50, 50, 50);
 }
 
 .brand-title {
 	font-size: 1.5rem;
-	margin: 0.5rem;
-}
-
-.nav-links {
-	display: flex;
-}
-
-.nav-links > * {
-	margin: 0 1rem;
+	margin: 1rem;
 	color: white;
-	display: block;
+}
+
+.navbar-links ul{
+	display: flex;
 }
 
 /* NAVBAR END */
