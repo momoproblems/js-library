@@ -47,7 +47,7 @@ table {
 	border-spacing: 0;
 }
 
-/* reset end */
+/* UTILS */
 
 body > * {
 	border: 1px solid #000;
@@ -61,23 +61,30 @@ body > * > * > * {
 	border: 1px solid #0c7ddf;
 }
 
+:root {
+	--light-green: #6ee7b7;
+	--light-green-hover: #a7f3d0;
+}
+
 /* NAVBAR START */
 
 .navbar {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background-color: rgb(50, 50, 50);
+	background-color: var(--light-green);
 }
 
 .brand-title {
-	font-size: 1.5rem;
+	font-size: 2.5rem;
 	margin: 1rem;
-	color: white;
+	color: black;
+	font-family: 'Lobster', cursive;
 }
 
 .navbar-links ul {
 	display: flex;
+	font-family: 'Playfair Display', serif;
 }
 
 .navbar-links li {
@@ -86,9 +93,12 @@ body > * > * > * {
 
 .navbar-links li a {
 	text-decoration: none;
-	color: white;
-	padding: 1rem;
+	color: black;
+	padding: 1.5rem;
 	display: block;
+	font-size: 1.5rem
 }
 
-/* NAVBAR END */
+.navbar-links li:hover {
+	background-color: var(--light-green-hover);
+}
