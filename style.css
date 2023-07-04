@@ -65,7 +65,7 @@ body > * > * > * {
 
 .navbar {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 	background-color: rgb(50, 50, 50);
 }
