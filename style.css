@@ -67,3 +67,8 @@ body > * > * > * {
 	align-items: center;
 	width: 100%;
 }
+
+.brand-title {
+	font-size: 1.5rem;
+	margin: 0.5rem;
+}
