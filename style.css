@@ -64,34 +64,10 @@ body > * > * > * {
 /* NAVBAR START */
 
 .navbar {
-	display: inline-flex;
+	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	width: 100%;
 	background-color: rgb(50, 50, 50);
-}
-
-.brand-title {
-	font-size: 2.5rem;
-	margin: 1rem;
-	color: white
-}
-
-.navbar-links {
-	display: inline-flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 10rem;
-	margin-right: 1rem;
-}
-
-.navbar-links > a {
-	text-decoration: none;
-	color: white;
-}
-
-.navbar-links > * {
-	font-size: 1.5rem;
 }
 
 
