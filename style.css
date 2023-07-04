@@ -70,7 +70,7 @@ body > * > * > * > * {
 	--light-green-hover: #a7f3d0;
 }
 
-/* NAVBAR START */
+/* NAVBAR */
 
 .navbar {
 	display: flex;
@@ -106,3 +106,5 @@ body > * > * > * > * {
 .navbar-links li:hover {
 	background-color: var(--light-green-hover);
 }
+
+/* TOGGLE BUTTON */
