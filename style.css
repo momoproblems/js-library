@@ -68,26 +68,25 @@ body > * > * > * {
 	justify-content: space-between;
 	align-items: center;
 	width: 100%;
+	background-color: rgb(50, 50, 50);
 }
 
 .brand-title {
-	font-size: 1.5rem;
+	font-size: 2.5rem;
 	margin: 0.5rem;
+	color: white
 }
 
-.navbar-links ul {
-	display: inline-flex;
+.navbar-links {
+	display: flex;
+	justify-content: space-between;
 	align-items: center;
+	width: 8rem;
 }
 
-.navbar-links ul li {
-	padding: 0 1rem;
-}
-
-.navbar-links ul li a {
-	color: #d01111;
+.navbar-links > a {
 	text-decoration: none;
-	font-size: 1.1rem;
+	color: white;
 }
 
 /* NAVBAR END */
