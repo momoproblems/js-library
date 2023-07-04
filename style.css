@@ -61,6 +61,10 @@ body > * > * > * {
 	border: 1px solid #0c7ddf;
 }
 
+body > * > * > * > * {
+	border: 1px solid #dfa00c;
+}
+
 :root {
 	--light-green: #6ee7b7;
 	--light-green-hover: #a7f3d0;
