@@ -52,6 +52,10 @@ table {
 :root {
 	--background-color: #ccfbf1;
 	--light-green-hover: #a7f3d0;
+	--read-color-green: #4ade80;
+	--read-color-red: #f87171;
+	--edit-color: #22d3ee;
+	--remove-color: #e72828;
 }
 
 body {
@@ -189,22 +193,22 @@ body {
 	border-top-right-radius: 15px;
 }
 
-.book-info > * {
-	padding: 10px;
-	border-bottom: 1px solid black;
-}
-
 .book-info h1 {
+	padding: 10px;
 	font-size: 1.5rem;
 	font-weight: bold;
 	font-family: 'Playfair Display', serif;
+	border-bottom: 1px solid black;
 }
 
 .book-info h2 {
+	padding: 10px;
 	font-family: 'Open Sans', sans-serif;
+	border-bottom: 1px solid black;
 }
   
 .book-info p {
+	padding: 10px;
 	font-family: 'Arial', sans-serif;
 }
 
@@ -213,10 +217,24 @@ body {
 	justify-content: space-around;
 	align-items: center;
 	width: 100%;
-	padding: 10px 0;
-	border: 1px solid black;
+	font-family: Oswald, sans-serif;
 }
 
-.book-buttons > * {
+.book-button-edit {
 	flex: 1;
+	padding: 10px 0;
+	background-color: var(--edit-color);
+}
+
+.book-button-read {
+	flex: 2;
+	padding: 10px 0;
+	background-color: var(--read-color-green);
+}
+
+.book-button-remove {
+	flex: 1;
+	padding: 10px 0;
+	background-color: var(--remove-color);
+
 }
