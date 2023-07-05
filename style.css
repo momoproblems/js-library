@@ -48,22 +48,6 @@ table {
 }
 
 /* UTILS */
-/* 
-body > * {
-	border: 1px solid #000;
-}
-
-body > * > * {
-	border: 1px solid #df0c0c;
-}
-
-body > * > * > * {
-	border: 1px solid #0c7ddf;
-}
-
-body > * > * > * > * {
-	border: 1px solid #dfa00c;
-} */
 
 :root {
 	--light-green: #6ee7b7;
