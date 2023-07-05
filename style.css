@@ -234,19 +234,23 @@ body {
 	flex: 1;
 	padding: 10px 0;
 	background-color: var(--edit-color);
+	border-top: 1px dashed black;
 }
 
 .book-button-read {
 	flex: 2;
 	padding: 10px 0;
 	background-color: var(--read-color-green);
+	border-left: 1px dashed black;
+	border-right: 1px dashed black;
+	border-top: 1px dashed black;
 }
 
 .book-button-remove {
 	flex: 1;
 	padding: 10px 0;
 	background-color: var(--remove-color);
-
+	border-top: 1px dashed black;
 }
 
 /* BOOK FORM START */
