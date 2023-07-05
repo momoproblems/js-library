@@ -72,8 +72,7 @@ body {
 	background-color: var(--background-color);
 }
 
-/* NAVBAR */
-
+/* NAVBAR START */
 .navbar {
 	display: flex;
 	justify-content: space-between;
@@ -110,7 +109,7 @@ body {
 	background-color: var(--light-green-hover);
 }
 
-/* TOGGLE BUTTON */
+/* TOGGLE BUTTON for Navbar */
 
 .navbar-toggle {
 	position: absolute;
@@ -133,30 +132,8 @@ body {
 	background-color: rgb(0, 0, 0);
 }
 
-/* BOOK LIST */
 
-.books-grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-	margin: 20px;
-}
-
-.book-card {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	font-size: 20px;
-	gap: var(--spacing-lg);
-	padding: var(--spacing-lg);
-	border-radius: var(--border-radius);
-	background-color: var(--white);
-	box-shadow: var(--shadow);
-	line-height: 1.2;
-}
-
-
-
-/* MEDIA QUERIES */
+/* MEDIA QUERIES for NAVBAR */
 
 @media (max-width: 500px) {
 	.navbar-toggle {
@@ -190,3 +167,30 @@ body {
 		display: flex;
 	}
 }
+/* NAVBAR END */
+
+
+
+/* BOOK LIST */
+
+.books-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	margin: 20px;
+}
+
+.book-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	font-size: 20px;
+	gap: var(--spacing-lg);
+	padding: var(--spacing-lg);
+	border-radius: var(--border-radius);
+	background-color: var(--white);
+	box-shadow: var(--shadow);
+	line-height: 1.2;
+}
+
+
+
