@@ -48,7 +48,7 @@ table {
 }
 
 /* UTILS */
-
+/* 
 body > * {
 	border: 1px solid #000;
 }
@@ -63,7 +63,7 @@ body > * > * > * {
 
 body > * > * > * > * {
 	border: 1px solid #dfa00c;
-}
+} */
 
 :root {
 	--light-green: #6ee7b7;
@@ -136,7 +136,7 @@ body > * > * > * > * {
 	}
 
 	.navbar-links {
-		/* display: none; */
+		display: none;
 		width: 100%;
 	}
 
@@ -158,5 +158,7 @@ body > * > * > * > * {
 		padding: .5rem
 	}
 
-	.
+	.navbar-links.active { /* this will make the navbar links visible in mobile view (display: flex) */
+		display: flex;
+	}
 }
