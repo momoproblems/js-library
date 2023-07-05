@@ -50,8 +50,12 @@ table {
 /* UTILS */
 
 :root {
-	--light-green: #6ee7b7;
+	--background-color: #ccfbf1;
 	--light-green-hover: #a7f3d0;
+}
+
+body {
+	background-color: var(--background-color);
 }
 
 /* NAVBAR */
@@ -60,7 +64,7 @@ table {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background-color: var(--light-green);
+	background-color: var(--background-color);
 }
 
 .brand-title {
