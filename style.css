@@ -169,7 +169,13 @@ body {
 }
 /* NAVBAR END */
 
+.book-card > * {
+	border: 1px solid black;
+}
 
+.book-card > * > * {
+	border: 1px solid black;
+}
 
 /* BOOK LIST */
 
