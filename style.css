@@ -58,8 +58,10 @@ body {
 	background-color: var(--background-color);
 }
 
+/* ADD BOOK */
+
 .add-book {
-	position: absolute;
+	position: fixed;
 	bottom: 3.8rem;
 	right: 1rem;
 	font-size: 20px
@@ -68,6 +70,48 @@ body {
 .add-book > img {
 	width: 60px;
 }
+.add-book-container {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+  }
+  
+  .add-book-form {
+	backdrop-filter: blur(5px);
+	background-color: rgba(255, 255, 255, 0.8);
+	padding: 20px;
+	border-radius: 6px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .add-book-form input[type="text"],
+  .add-book-form input[type="number"] {
+	width: 100%;
+	padding: 10px;
+	border: none;
+	border-radius: 4px;
+	margin-bottom: 10px;
+  }
+  
+  .add-book-form button {
+	display: block;
+	margin-top: 10px;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 4px;
+	background-color: #007bff;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+  }
+  
+  .add-book-form button:hover {
+	background-color: #0056b3;
+  }
 
 /* NAVBAR */
 
@@ -188,7 +232,7 @@ body {
 	background-color: var(--background-color);
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 	padding: 1rem;
-	position: absolute;
+	position: fixed;
 	bottom: 0;
 	width: 100%;
 }
@@ -228,3 +272,45 @@ body {
 		display: flex;
 	}
 }
+
+/* BUTTON */
+
+.button {
+	display: inline-block;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 4px;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.button-primary {
+	color: #fff;
+	background-color: #007bff;
+}
+
+.button-primary:hover {
+	background-color: #0056b3;
+}
+
+.button-secondary {
+	color: #fff;
+	background-color: #dd1a1a;
+}
+
+.button-secondary:hover {
+	background-color: #b30000;
+}
+
+.book-card-buttons {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 100%;
+}
+
+  
