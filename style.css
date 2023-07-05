@@ -178,6 +178,12 @@ body {
     0px 0px 10px rgba(0, 0, 0, 0.4),
     0px 2px 8px rgba(0, 0, 0, 0.8),
     0px 6px 10px rgba(0, 0, 0, 0.4);
+	transition: transform 0.5s ease;
+}
+
+.book-card:hover {
+	transform: scale(1.05);
+	transition: transform 0.5s ease;
 }
 
 .book-card > * {
@@ -218,6 +224,10 @@ body {
 	align-items: center;
 	width: 100%;
 	font-family: Oswald, sans-serif;
+}
+
+.book-buttons:hover {
+	cursor: pointer;
 }
 
 .book-button-edit {
