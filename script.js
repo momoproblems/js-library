@@ -86,6 +86,7 @@ bookCardForm.addEventListener('submit', function(event) {
     
     const newBook = new Book(title, author, pages, read);
     console.log(newBook);
+    makeCard(newBook);
 
     bookCardForm.reset();
     closeForm();
@@ -107,3 +108,55 @@ readStatusToggle.addEventListener('click', function() {
         readStatusToggle.style.backgroundColor = "var(--read-color-green)"
     }
 });
+
+// make card when form is submitted -------------------------------
+const bookGrid = document.getElementById('bookGrid');
+
+function makeCard(book) {
+    const bookCard = document.createElement('div');
+    bookCard.classList.add('book-card');
+  
+    const bookImage = document.createElement('div');
+    bookImage.classList.add('book-image');
+    const image = document.createElement('img');
+    image.src = 'assets/imgs/book-card-image.jpg';
+    bookImage.appendChild(image);
+  
+    const bookInfo = document.createElement('div');
+    bookInfo.classList.add('book-info');
+    const titleElement = document.createElement('h1');
+    titleElement.textContent = book.title;
+    const authorElement = document.createElement('h2');
+    authorElement.textContent = book.author;
+    const pagesElement = document.createElement('p');
+    pagesElement.textContent = book.pages + ' pages';
+    bookInfo.appendChild(titleElement);
+    bookInfo.appendChild(authorElement);
+    bookInfo.appendChild(pagesElement);
+  
+    const bookButtons = document.createElement('div');
+    bookButtons.classList.add('book-buttons');
+    const editButton = document.createElement('div');
+    editButton.classList.add('book-button-edit');
+    editButton.textContent = 'Edit';
+    const readButton = document.createElement('div');
+    readButton.classList.add('book-button-read');
+    if (book.read) {
+        readButton.textContent = 'Read';
+    }
+    else {
+        readButton.textContent = 'Not Read';
+    }
+    const removeButton = document.createElement('div');
+    removeButton.classList.add('book-button-remove');
+    removeButton.textContent = 'Remove';
+    bookButtons.appendChild(editButton);
+    bookButtons.appendChild(readButton);
+    bookButtons.appendChild(removeButton);
+  
+    bookCard.appendChild(bookImage);
+    bookCard.appendChild(bookInfo);
+    bookCard.appendChild(bookButtons);
+  
+    bookGrid.appendChild(bookCard);
+}  
