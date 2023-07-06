@@ -24,6 +24,8 @@ function openForm() {
 function closeForm() {
     bookCardForm.classList.remove('active');
     blurBackground.classList.remove('active');
+    readStatusNo.classList.remove('active');
+    readStatusYes.classList.remove('active');
     isFormOpen = false;
     bookCardForm.reset();
 }
@@ -44,30 +46,55 @@ window.addEventListener("click", function (event) {
 
 // book card class -----------------------------------------------
 class Book {
-    constructor(title, author, pages) {
+    constructor(title=null, author=null, pages=0, read=false) {
         this.title = title;
         this.author = author;
         this.pages = pages;
+        this.read = read;
     }
 }
 
-// Add submit event listener to the form
+// get read status -----------------------------------------------
+const readStatusYes = document.getElementById('form-read-yes');
+const readStatusNo = document.getElementById('form-read-no');
+
+readStatusYes.addEventListener('click', function() {
+    readStatusYes.classList.add('active');
+    readStatusNo.classList.remove('active');
+});
+
+readStatusNo.addEventListener('click', function() {
+    readStatusNo.classList.add('active');
+    readStatusYes.classList.remove('active');
+});
+
+// submit book card ----------------------------------------------
 bookCardForm.addEventListener('submit', function(event) {
     event.preventDefault();
 
     const title = document.getElementById('form-title').value;
     const author = document.getElementById('form-author').value;
     const pages = document.getElementById('form-pages').value;
+    var read;
+
+    if (readStatusYes.classList.contains('active')) {
+        read = true;
+    }
+    else {
+        read = false;
+    }
     
-    const newBook = new Book(title, author, pages);
+    const newBook = new Book(title, author, pages, read);
     console.log(newBook);
 
     bookCardForm.reset();
     closeForm();
+    readStatusYes.classList.remove('active');
+    readStatusNo.classList.remove('active');
 });
 });
 
-// Read status toggle ---------------------------------------------
+// Read status toggle for card -----------------------------------
 const readStatusToggle = document.getElementById('readStatusToggle');
 
 readStatusToggle.addEventListener('click', function() {

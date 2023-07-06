@@ -303,11 +303,14 @@ body {
 	background-color: var(--read-color-red);
 }
 
+.book-form-button-read.active,
+.book-form-button-not-read.active {
+	border: 2px solid black;
+}
+
 .book-form-button-submit {
 	background-color: var(--submit-color);
 }
-
-
 
 .book-card-wrapper.active {
 	display: flex;
@@ -326,7 +329,6 @@ body {
 }
 
 /* BLUR START */
-
 #blur.active {
 	filter: blur(10px);
 	pointer-events: none; /* Disable pointer events */
