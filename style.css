@@ -325,4 +325,10 @@ body {
 	cursor: pointer;
 }
 
-/* OVERLAY START */
+/* BLUR START */
+
+#blur.active {
+	filter: blur(10px);
+	pointer-events: none; /* Disable pointer events */
+	user-select: none; /* Disable user selection */
+}

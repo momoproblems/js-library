@@ -9,14 +9,17 @@ toggleButton.addEventListener('click', function() {
 // add book button ----------------------------------------------
 const addBookButton = document.getElementById('add-book-button');
 const bookCardForm = document.getElementById('book-card-wrapper');
+const blurBackground = document.getElementById('blur');
 let isFormOpen = false;
 
 addBookButton.addEventListener('click', function () {
   if (isFormOpen) {
     bookCardForm.classList.remove('active');
+    blurBackground.classList.remove('active');
     isFormOpen = false;
   } else {
     bookCardForm.classList.add('active');
+    blurBackground.classList.add('active');
     isFormOpen = true;
   }
 });
@@ -25,6 +28,7 @@ addBookButton.addEventListener('click', function () {
 window.addEventListener("click", function (event) {
   if (event.target !== addBookButton && !bookCardForm.contains(event.target)) {
     bookCardForm.classList.remove('active');
+    blurBackground.classList.remove('active');
     isFormOpen = false;
   }
 });
