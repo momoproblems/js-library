@@ -115,6 +115,11 @@ readStatusToggleButtons.forEach(function(button) {
 });
 
 
+// Function to remove book card
+function removeBookCard(card) {
+    card.parentNode.removeChild(card);
+  }
+
 // make card when form is submitted -------------------------------
 const bookGrid = document.getElementById('bookGrid');
 
@@ -158,14 +163,27 @@ function makeCard(book) {
     const removeButton = document.createElement('div');
     removeButton.classList.add('book-button-remove');
     removeButton.textContent = 'Remove';
+
     bookButtons.appendChild(editButton);
     bookButtons.appendChild(readButton);
     bookButtons.appendChild(removeButton);
-  
     bookCard.appendChild(bookImage);
     bookCard.appendChild(bookInfo);
     bookCard.appendChild(bookButtons);
+
+    removeButton.addEventListener('click', function() {
+        removeBookCard(bookCard);
+      });
   
     bookGrid.appendChild(bookCard);
     addReadStatusToggleListener(readButton);
-}  
+} 
+
+// Event listener for remove buttons of existing book cards
+const removeButtons = document.querySelectorAll('.book-button-remove');
+removeButtons.forEach(function(button) {
+  button.addEventListener('click', function() {
+    const card = button.parentNode.parentNode; // Traverse the DOM to the parent book card element
+    removeBookCard(card);
+  });
+});
