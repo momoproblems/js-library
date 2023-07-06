@@ -13,10 +13,10 @@ let isFormOpen = false;
 
 addBookButton.addEventListener('click', function () {
   if (isFormOpen) {
-    bookCardForm.style.display = "none";
+    bookCardForm.classList.remove('active');
     isFormOpen = false;
   } else {
-    bookCardForm.style.display = "flex";
+    bookCardForm.classList.add('active');
     isFormOpen = true;
   }
 });
@@ -24,7 +24,7 @@ addBookButton.addEventListener('click', function () {
 
 window.addEventListener("click", function (event) {
   if (event.target !== addBookButton && !bookCardForm.contains(event.target)) {
-    bookCardForm.style.display = "none";
+    bookCardForm.classList.remove('active');
     isFormOpen = false;
   }
 });
