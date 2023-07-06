@@ -42,7 +42,7 @@ window.addEventListener("click", function (event) {
   }
 });
 
-// book card form -----------------------------------------------
+// book card class -----------------------------------------------
 class Book {
     constructor(title, author, pages) {
         this.title = title;
@@ -59,13 +59,24 @@ bookCardForm.addEventListener('submit', function(event) {
     const author = document.getElementById('form-author').value;
     const pages = document.getElementById('form-pages').value;
     
+    const newBook = new Book(title, author, pages);
+    console.log(newBook);
 
-    console.log('Form submitted');
-    console.log('Title:', title);
-    console.log('Author:', author);
-    console.log('Pages:', pages);
-    
-    // Reset the form
     bookCardForm.reset();
+    closeForm();
 });
+});
+
+// Read status toggle ---------------------------------------------
+const readStatusToggle = document.getElementById('readStatusToggle');
+
+readStatusToggle.addEventListener('click', function() {
+    if (readStatusToggle.innerText === "Read") {
+        readStatusToggle.innerText = "Not Read";
+        readStatusToggle.style.backgroundColor = "var(--read-color-red)"
+    }
+    else {
+        readStatusToggle.innerText = "Read";
+        readStatusToggle.style.backgroundColor = "var(--read-color-green)"
+    }
 });
