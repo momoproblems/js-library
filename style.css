@@ -229,7 +229,8 @@ body {
 	font-family: Oswald, sans-serif;
 }
 
-.book-buttons > *:hover {
+.book-button-read:hover,
+.book-button-remove:hover {
 	cursor: pointer;
 	background-color: var(--light-green-hover);
 }
