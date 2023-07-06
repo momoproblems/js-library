@@ -170,7 +170,7 @@ body {
 .book-card {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 	margin: 15px;
 	border-top-left-radius: 15px;
