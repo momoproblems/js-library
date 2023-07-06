@@ -254,13 +254,12 @@ body {
 
 
 .book-card-form > * {
-	width: 100%;
+	width: 90%;
 	text-align: center;
 	border: 1px solid black;
 }
 
 .book-card-form > * > *{
-	width: 100%;
 	text-align: center;
 	border: 1px solid black;
 }
@@ -278,9 +277,20 @@ body {
     0px 6px 10px rgba(0, 0, 0, 0.1);
 
 	width: 250px;
-	height: 200px;
+	height: 250px;
 	position: fixed;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+
+.book-form-button:hover {
+	cursor: pointer;
+}
+
+.book-form-button {
+	padding: 10px 0;
+	width: 90%;
+	background-color: var(--edit-color);
+	font-family: Oswald, sans-serif;
 }
