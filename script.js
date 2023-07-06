@@ -1,3 +1,4 @@
+// navbar toggle
 const toggleButton = document.getElementsByClassName('navbar-toggle')[0];
 const navBarLinks = document.getElementsByClassName('navbar-links')[0];
 
@@ -5,6 +6,13 @@ toggleButton.addEventListener('click', function() {
     return navBarLinks.classList.toggle('active');
 });
 
+// add book button
+const addBookButton = document.getElementById('add-book-button');
+const bookCardForm = document.getElementsByClassName('book-card-wrapper')[0];
+
+addBookButton.addEventListener('click', function() {
+    return bookCardForm.classList.toggle('active');
+});
 
 // class Book {
 //     constructor(title, author, isbn, publicationYear, description) {

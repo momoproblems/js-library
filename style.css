@@ -253,6 +253,10 @@ body {
 }
 
 /* BOOK FORM START */
+.book-card-wrapper {
+	display: none;
+}
+
 .book-card-form {
 	display: flex;
 	flex-direction: column;
@@ -301,6 +305,12 @@ body {
 
 .book-form-button-submit {
 	background-color: var(--submit-color);
+}
+
+
+
+.book-card-wrapper:active {
+	display: flex;
 }
 
 /* BOOK ADD BUTTON START */
