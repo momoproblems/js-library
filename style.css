@@ -279,7 +279,6 @@ body {
 .book-form-button {
 	padding: 10px 0;
 	width: 90%;
-	background-color: var(--edit-color);
 	font-family: Oswald, sans-serif;
 }
 
