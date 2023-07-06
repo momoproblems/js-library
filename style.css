@@ -302,3 +302,15 @@ body {
 .book-form-button-submit {
 	background-color: var(--submit-color);
 }
+
+/* BOOK ADD BUTTON START */
+.add-book-button {
+	width: 5%;
+	position: fixed;
+	bottom: 2%;
+	right: 2%;
+}
+
+.add-book-button:hover {
+	cursor: pointer;
+}
