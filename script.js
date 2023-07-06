@@ -95,11 +95,9 @@ bookCardForm.addEventListener('submit', function(event) {
 });
 });
 
-// Read status toggle for card -----------------------------------
-const readStatusToggleButtons = document.querySelectorAll('.book-button-read');
-
-readStatusToggleButtons.forEach(function (button) {
-    button.addEventListener('click', function () {
+// Function for adding event listener to read status toggle buttons
+function addReadStatusToggleListener(button) {
+    button.addEventListener('click', function() {
         if (button.innerText === 'Read') {
             button.innerText = 'Not Read';
             button.style.backgroundColor = 'var(--read-color-red)';
@@ -108,6 +106,12 @@ readStatusToggleButtons.forEach(function (button) {
             button.style.backgroundColor = 'var(--read-color-green)';
         }
     });
+}
+
+// Read status toggle for existing card buttons
+const readStatusToggleButtons = document.querySelectorAll('.book-button-read');
+readStatusToggleButtons.forEach(function(button) {
+    addReadStatusToggleListener(button);
 });
 
 
@@ -163,4 +167,5 @@ function makeCard(book) {
     bookCard.appendChild(bookButtons);
   
     bookGrid.appendChild(bookCard);
+    addReadStatusToggleListener(readButton);
 }  
