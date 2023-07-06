@@ -1,18 +1,22 @@
 'use strict'
-document.addEventListener('DOMContentLoaded', function() {
-
-// navbar toggle button ------------------------------------------
 const toggleButton = document.getElementsByClassName('navbar-toggle')[0];
 const navBarLinks = document.getElementsByClassName('navbar-links')[0];
+const addBookButton = document.getElementById('add-book-button');
+const bookCardForm = document.getElementById('book-card-wrapper');
+const blurBackground = document.getElementById('blur');
+const readStatusYes = document.getElementById('form-read-yes');
+const readStatusNo = document.getElementById('form-read-no');
+const readStatusToggleButtons = document.querySelectorAll('.book-button-read');
+const removeButtons = document.querySelectorAll('.book-button-remove');
+
+document.addEventListener('DOMContentLoaded', function() {
 
 toggleButton.addEventListener('click', function() {
     return navBarLinks.classList.toggle('active');
 });
 
 // add book button ----------------------------------------------
-const addBookButton = document.getElementById('add-book-button');
-const bookCardForm = document.getElementById('book-card-wrapper');
-const blurBackground = document.getElementById('blur');
+
 let isFormOpen = false;
 
 function openForm() {
@@ -55,8 +59,7 @@ class Book {
 }
 
 // get read status -----------------------------------------------
-const readStatusYes = document.getElementById('form-read-yes');
-const readStatusNo = document.getElementById('form-read-no');
+
 
 readStatusYes.addEventListener('click', function() {
     readStatusYes.classList.add('active');
@@ -109,7 +112,7 @@ function addReadStatusToggleListener(button) {
 }
 
 // Read status toggle for existing card buttons
-const readStatusToggleButtons = document.querySelectorAll('.book-button-read');
+
 readStatusToggleButtons.forEach(function(button) {
     addReadStatusToggleListener(button);
 });
@@ -122,17 +125,14 @@ function removeBookCard(card) {
 
 // make card when form is submitted -------------------------------
 const bookGrid = document.getElementById('bookGrid');
-
 function makeCard(book) {
     const bookCard = document.createElement('div');
     bookCard.classList.add('book-card');
-  
     const bookImage = document.createElement('div');
     bookImage.classList.add('book-image');
     const image = document.createElement('img');
     image.src = 'assets/imgs/book-card-image.jpg';
     bookImage.appendChild(image);
-  
     const bookInfo = document.createElement('div');
     bookInfo.classList.add('book-info');
     const titleElement = document.createElement('h1');
@@ -144,7 +144,6 @@ function makeCard(book) {
     bookInfo.appendChild(titleElement);
     bookInfo.appendChild(authorElement);
     bookInfo.appendChild(pagesElement);
-  
     const bookButtons = document.createElement('div');
     bookButtons.classList.add('book-buttons');
     const editButton = document.createElement('div');
@@ -179,11 +178,11 @@ function makeCard(book) {
     addReadStatusToggleListener(readButton);
 } 
 
-// Event listener for remove buttons of existing book cards
-const removeButtons = document.querySelectorAll('.book-button-remove');
+
+// Remove book card from DOM
 removeButtons.forEach(function(button) {
   button.addEventListener('click', function() {
-    const card = button.parentNode.parentNode; // Traverse the DOM to the parent book card element
+    const bookCardElement = button.parentNode.parentNode;
     removeBookCard(card);
   });
 });
