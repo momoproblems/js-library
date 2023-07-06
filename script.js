@@ -9,16 +9,24 @@ toggleButton.addEventListener('click', function() {
 // add book button ----------------------------------------------
 const addBookButton = document.getElementById('add-book-button');
 const bookCardForm = document.getElementById('book-card-wrapper');
+let isFormOpen = false;
 
-addBookButton.addEventListener('click', function() {
-    bookCardForm.classList.toggle('active');
+addBookButton.addEventListener('click', function () {
+  if (isFormOpen) {
+    bookCardForm.style.display = "none";
+    isFormOpen = false;
+  } else {
+    bookCardForm.style.display = "flex";
+    isFormOpen = true;
+  }
 });
 
-// Event listener to close the form when clicking outside of it
-window.addEventListener('click', function(event) {
-    if (event.target !== addBookButton && event.target !== bookCardForm) {
-        bookCardForm.classList.remove('active');
-    }
+
+window.addEventListener("click", function (event) {
+  if (event.target !== addBookButton && !bookCardForm.contains(event.target)) {
+    bookCardForm.style.display = "none";
+    isFormOpen = false;
+  }
 });
 
 // class Book {
