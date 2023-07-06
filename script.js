@@ -143,9 +143,11 @@ function makeCard(book) {
     readButton.classList.add('book-button-read');
     if (book.read) {
         readButton.textContent = 'Read';
+        readButton.classList.add('book-form-button-read');
     }
     else {
         readButton.textContent = 'Not Read';
+        readButton.classList.add('book-form-button-not-read');
     }
     const removeButton = document.createElement('div');
     removeButton.classList.add('book-button-remove');
