@@ -96,18 +96,20 @@ bookCardForm.addEventListener('submit', function(event) {
 });
 
 // Read status toggle for card -----------------------------------
-const readStatusToggle = document.getElementById('readStatusToggle');
+const readStatusToggleButtons = document.querySelectorAll('.book-button-read');
 
-readStatusToggle.addEventListener('click', function() {
-    if (readStatusToggle.innerText === "Read") {
-        readStatusToggle.innerText = "Not Read";
-        readStatusToggle.style.backgroundColor = "var(--read-color-red)"
-    }
-    else {
-        readStatusToggle.innerText = "Read";
-        readStatusToggle.style.backgroundColor = "var(--read-color-green)"
-    }
+readStatusToggleButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+        if (button.innerText === 'Read') {
+            button.innerText = 'Not Read';
+            button.style.backgroundColor = 'var(--read-color-red)';
+        } else {
+            button.innerText = 'Read';
+            button.style.backgroundColor = 'var(--read-color-green)';
+        }
+    });
 });
+
 
 // make card when form is submitted -------------------------------
 const bookGrid = document.getElementById('bookGrid');
