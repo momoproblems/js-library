@@ -1,4 +1,4 @@
-// navbar toggle
+// navbar toggle button ------------------------------------------
 const toggleButton = document.getElementsByClassName('navbar-toggle')[0];
 const navBarLinks = document.getElementsByClassName('navbar-links')[0];
 
@@ -6,12 +6,19 @@ toggleButton.addEventListener('click', function() {
     return navBarLinks.classList.toggle('active');
 });
 
-// add book button
+// add book button ----------------------------------------------
 const addBookButton = document.getElementById('add-book-button');
-const bookCardForm = document.getElementsByClassName('book-card-wrapper')[0];
+const bookCardForm = document.getElementById('book-card-wrapper');
 
 addBookButton.addEventListener('click', function() {
-    return bookCardForm.classList.toggle('active');
+    bookCardForm.classList.toggle('active');
+});
+
+// Event listener to close the form when clicking outside of it
+window.addEventListener('click', function(event) {
+    if (event.target !== addBookButton && event.target !== bookCardForm) {
+        bookCardForm.classList.remove('active');
+    }
 });
 
 // class Book {
