@@ -1,6 +1,4 @@
 'use strict'
-let counter = 1;
-
 document.addEventListener('DOMContentLoaded', function() {
 
 // navbar toggle button ------------------------------------------
@@ -151,8 +149,7 @@ function makeCard(book) {
     bookButtons.classList.add('book-buttons');
     const editButton = document.createElement('div');
     editButton.classList.add('book-button-edit');
-    counter++;
-    editButton.textContent = counter;
+    editButton.textContent = 'Edit';
     const readButton = document.createElement('div');
     readButton.classList.add('book-button-read');
     if (book.read) {
