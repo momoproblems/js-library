@@ -251,19 +251,6 @@ body {
 }
 
 /* BOOK FORM START */
-
-
-.book-card-form > * {
-	width: 90%;
-	text-align: center;
-	border: 1px solid black;
-}
-
-.book-card-form > * > *{
-	text-align: center;
-	border: 1px solid black;
-}
-
 .book-card-form {
 	display: flex;
 	flex-direction: column;
@@ -284,8 +271,9 @@ body {
 	transform: translate(-50%, -50%);
 }
 
-.book-form-button:hover {
-	cursor: pointer;
+.book-card-form > * {
+	width: 90%;
+	text-align: center;
 }
 
 .book-form-button {
@@ -293,4 +281,8 @@ body {
 	width: 90%;
 	background-color: var(--edit-color);
 	font-family: Oswald, sans-serif;
+}
+
+.book-form-button:hover {
+	cursor: pointer;
 }
