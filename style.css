@@ -56,6 +56,7 @@ table {
 	--read-color-red: #f87171;
 	--edit-color: #22d3ee;
 	--remove-color: #e72828;
+	--submit-color: #818cf8;
 }
 
 body {
@@ -226,8 +227,9 @@ body {
 	font-family: Oswald, sans-serif;
 }
 
-.book-buttons:hover {
+.book-buttons > *:hover {
 	cursor: pointer;
+	background-color: var(--light-green-hover);
 }
 
 .book-button-edit {
@@ -284,4 +286,17 @@ body {
 
 .book-form-button:hover {
 	cursor: pointer;
+	background-color: var(--light-green-hover);
+}
+
+.book-form-button-read {
+	background-color: var(--read-color-green);
+}
+
+.book-form-button-not-read {
+	background-color: var(--read-color-red);
+}
+
+.book-form-button-submit {
+	background-color: var(--submit-color);
 }
